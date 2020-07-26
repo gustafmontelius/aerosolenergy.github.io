@@ -1,0 +1,340 @@
+* {
+    box-sizing: border-box;
+    -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html, body {
+    background: #ffc646;
+    margin: 0;
+    scroll-snap-type: y mandatory;
+}
+
+a {
+  text-decoration: underline;
+  color: inherit;
+  background-color:none;
+}
+
+a:focus {
+outline: none !important;
+background-color:none;
+}
+/*
+html {
+  scroll-behavior: smooth;
+}
+*/
+
+.hidetop {
+    height: 120px;
+    margin: auto;
+    width: 100vw;
+    background-color: #ffc646;
+    position: fixed;
+    top: 0;
+    z-index: 5000;
+    border: 0px solid green;
+    display: none;
+    z-index: 2;
+}
+
+.infocontainer {
+  scroll-snap-type: y mandatory;
+  height: calc(100vh - 80px);
+}
+
+.infochild {
+  scroll-snap-align: start;
+  padding-top: 1px;
+  scroll-snap-stop: always;
+}
+
+.infoheader {
+    width: 350px;
+  text-align: left;
+  position: fixed;
+  font-family: 'glossymag';
+  font-size: 20px;
+  line-height: 26px;
+  margin: auto;
+  left: 0;
+  top: 0;
+  right: 0;
+  background-color: #ffc646;
+  z-index: 1000;
+  height: 80px;
+  color: black;
+  border-bottom: 1px solid black;
+}
+
+.titleinfo {
+  padding-top: 20px;
+  margin: auto;
+  left: 5px;
+  top: 0;
+  font-size: 40px;
+  line-height: 38px;
+  position:absolute;
+  text-align: center;
+  font-family: 'glossymag';
+  text-transform: uppercase;
+}
+
+.kryss {
+  padding-top: 20px;
+  margin: auto;
+  top: 0;
+  right: 5px;
+  font-size: 40px;
+  line-height: 38px;
+  position:absolute;
+  text-align: center;
+  font-family: 'glossymag';
+  text-transform: uppercase;
+}
+
+.mellanrum {
+  width: 350px;
+  height: 350px;
+  margin: auto;
+  border: 0px solid black;
+}
+
+@font-face {
+  font-family: 'glossymag';
+  src: url('GlossyMagazine-LightWeb.woff');
+}
+
+p {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  color: black;
+}
+
+.horizon {
+  color: black;
+  border-bottom: 1px solid black;
+  width: 350px;
+}
+
+.ovalfirst {
+  width: 300px;
+  height: 110px;
+  margin: auto;
+  margin-top: 120px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 1px solid black;
+  font-family: 'glossymag';
+  font-size: 40px;
+  text-align: center;
+  padding: 27px;
+}
+
+.oval {
+  width: 300px;
+  height: 110px;
+  margin: auto;
+  margin-top: 45px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-radius: 50%;
+  border: 1px solid black;
+  font-family: 'glossymag';
+  font-size: 40px;
+  text-align: center;
+  padding: 27px;
+}
+
+.arrowcontainer {
+  width: 350px;
+  height: auto;
+  margin: auto;
+  margin-bottom: 45px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  position: fixed;
+}
+
+.arrow {
+  width: 50px;
+  height: 30px;
+  margin: auto;
+  margin-left: calc(50% - 25px);
+}
+
+.ovaler {
+  height: calc(100vh - 80px);
+}
+
+.exhibition {
+  width: 350px;
+  height: auto;
+  margin: auto;
+  padding-top: 85px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.artists {
+  width: 350px;
+  height: auto;
+  margin: auto;
+  padding-top: 85px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.colophon {
+  width: 350px;
+  height: 100vh;
+  margin: auto;
+  padding-top: 85px;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+
+.infoexhibition {
+  opacity: 0;
+  text-align: left;
+  position: absolute;
+  left: 0;
+}
+
+.infocolophon {
+  opacity: 0;
+  text-align: left;
+  position: absolute;
+  left: 0;
+}
+
+.infoartists {
+  opacity: 0;
+  text-align: left;
+  position: absolute;
+  left: 0;
+}
+
+.logos {
+  border-bottom: 1px solid black;
+}
+
+.logo1 {
+  height: auto;
+  width: 175px;
+  float: left;
+}
+
+.logo2 {
+  height: auto;
+  width: 155px;
+  float: right;
+  border-left: 1px solid black;
+  margin-left: 20px;
+}
+
+img {
+  width: 175px;
+}
+/*Small devices (landscape phones, 576px and up)*/
+@media only screen and (max-width: 320px) {
+  .infoheader, .horizon, .arrowcontainer, .exhibition, .artists, .colophon {
+    width: 300px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  .hidetop {
+    display: none;
+  }
+  .infochild {
+    width: 300px;
+    margin-left: 50px;
+  }
+  .logo1 {
+    width: 150px;
+  }
+  .logo2 {
+    width: 100px;
+  }
+  .colophon {
+    height: 125vh;
+  }
+}
+
+/*Medium devices (tablets, 768px and up)*/
+@media only screen and (min-width: 768px) {
+.infoheader {
+  margin-top: 60px;
+}
+.ovalfirst {
+  margin-top: 180px;
+}
+.artists, .exhibition, .colophon {
+  padding-top: 145px;
+}
+.hidetop {
+  display: block;
+}
+}
+
+/*Large devices (desktops, 991px and up)*/
+@media only screen and (min-width: 991px) {
+  .infoheader {
+    margin-top: 80px;
+  }
+  .ovalfirst {
+    margin-top: 200px;
+  }
+  .artists, .exhibition, .colophon {
+    padding-top: 165px;
+  }
+  .hidetop {
+    display: block;
+  }
+}
+
+/*Extra large devices (large desktops, 1200px and up)*/
+@media only screen and (min-width: 1200px) {
+  .infoheader {
+    margin-top: 80px;
+  }
+  .ovalfirst {
+    margin-top: 200px;
+  }
+  .artists, .exhibition, .colophon {
+    padding-top: 165px;
+  }
+  .hidetop {
+    display: block;
+  }
+}
+
+/*Extra EXTRA large devices (large desktops, 1400px and up)*/
+@media only screen and (min-width: 1400px) {
+  .infoheader {
+    margin-top: 100px;
+  }
+  .ovalfirst {
+    margin-top: 240px;
+  }
+  .artists, .exhibition, .colophon {
+    padding-top: 185px;
+  }
+  .hidetop {
+    display: block;
+  }
+}
